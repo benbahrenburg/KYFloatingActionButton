@@ -8,7 +8,7 @@
 
 import UIKit
 
-@objc protocol KYButtonDelegate  {
+@objc public protocol KYButtonDelegate  {
     
     @objc optional func closeKYButton(_ button:KYButton)
     @objc optional func openKYButton(_ button:KYButton)

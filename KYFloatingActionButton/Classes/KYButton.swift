@@ -12,7 +12,7 @@ import UIKit
 open class KYButton: UIView{
 
 
-     enum openButtonType {
+    public enum openButtonType {
         case slideUp
         case slideDown
         case popUp
@@ -28,24 +28,24 @@ open class KYButton: UIView{
     }
     */
     
-    var kyDelegate:KYButtonDelegate?
+    public var kyDelegate:KYButtonDelegate?
     
-    var fabTitleColor : UIColor!
-    var hilighColor : UIColor!
-    var orignalColor : UIColor!
+    public var fabTitleColor : UIColor!
+    public var hilighColor : UIColor!
+    public var orignalColor : UIColor!
     var overLayView : OverLayView!
     
     var buttonLayer : ButtonLayer?
-    var isHide : Bool = true
+    public var isHide : Bool = true
     
-    var openType : openButtonType = .popUp
+    public var openType : openButtonType = .popUp
     
-    var buttonCells : KYButtonCells?
+    public var buttonCells : KYButtonCells?
     
     var items : [KYButtonCells] = []
     
     
-    var plusColor:UIColor = UIColor.black{
+    public var plusColor:UIColor = UIColor.black{
         didSet{
             buttonLayer?.plusColor = plusColor
         }
