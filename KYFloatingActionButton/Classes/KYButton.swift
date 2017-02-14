@@ -7,8 +7,9 @@
 //
 
 import UIKit
+
 @IBDesignable
-class KYButton: UIView{
+open class KYButton: UIView{
 
 
      enum openButtonType {
@@ -56,7 +57,7 @@ class KYButton: UIView{
     }
     
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         buttonLayer = ButtonLayer.init(bg: self.backgroundColor!)
         orignalColor = self.backgroundColor
@@ -71,25 +72,25 @@ class KYButton: UIView{
         super.init(frame: frame)
     }
     
-    override var intrinsicContentSize: CGSize{
+    override open var intrinsicContentSize: CGSize{
             return CGSize(width: 55, height: 55)
     }
     
     
-    override func layoutSubviews() {
+    override open func layoutSubviews() {
         super.layoutSubviews()
         buttonLayer?.frame = self.bounds
         self.invalidateIntrinsicContentSize()
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override open func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
         hilighColor = orignalColor
         buttonLayer?.backgroundColor = hilighColor.white(rate: 0.7).cgColor
     }
  
     
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override open func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         
         
         

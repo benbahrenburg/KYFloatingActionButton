@@ -8,7 +8,7 @@
 
 import UIKit
 
-class KYButtonCells: UIView {
+open class KYButtonCells: UIView {
 
     /*
     // Only override draw() if you perform custom drawing.
@@ -82,7 +82,7 @@ class KYButtonCells: UIView {
         }
     }
     
-    override var frame: CGRect{
+    override open var frame: CGRect{
         didSet{
             _iconImageView?.center = CGPoint(x: self.frame.width/2, y: self.frame.height/3.2)
         }
@@ -100,7 +100,7 @@ class KYButtonCells: UIView {
         super.init(frame: frame)
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
@@ -133,12 +133,12 @@ class KYButtonCells: UIView {
         titleLabel.layer.shadowOpacity = 0.5
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override open func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.creatLayer()
     }
     
     
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override open func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         tintLayer.removeFromSuperlayer()
         if let touch = touches.first{
            if touch.tapCount == 1 {

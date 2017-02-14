@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ButtonLayer: CAShapeLayer {
+open class ButtonLayer: CAShapeLayer {
     
     
     convenience init(bg:UIColor) {
@@ -23,7 +23,7 @@ class ButtonLayer: CAShapeLayer {
         }
     }
     
-    override var frame: CGRect {
+    override open var frame: CGRect {
         didSet {
             print (self.frame)
             self.drawPlus()
@@ -38,7 +38,7 @@ class ButtonLayer: CAShapeLayer {
         super.init()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     

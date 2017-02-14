@@ -8,8 +8,6 @@
 
 import UIKit
 
-
-    
 @objc protocol KYButtonDelegate  {
     
     @objc optional func closeKYButton(_ button:KYButton)
