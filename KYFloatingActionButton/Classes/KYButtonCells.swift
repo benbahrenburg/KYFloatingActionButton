@@ -69,7 +69,7 @@ open class KYButtonCells: UIView {
         get {
             if _iconImageView == nil {
                 _iconImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
-                _iconImageView?.contentMode = UIViewContentMode.scaleAspectFill
+                _iconImageView?.contentMode = UIViewContentMode.scaleAspectFit
                 addSubview(_iconImageView!)
             }
             return _iconImageView!
@@ -84,7 +84,9 @@ open class KYButtonCells: UIView {
     
     override open var frame: CGRect{
         didSet{
-            _iconImageView?.center = CGPoint(x: self.frame.width/2, y: self.frame.height/3.2)
+            let x = (self.frame.width/2) - 3
+            let y = self.frame.height/3.6
+            _iconImageView?.center = CGPoint(x: x, y: y)
         }
     }
     
