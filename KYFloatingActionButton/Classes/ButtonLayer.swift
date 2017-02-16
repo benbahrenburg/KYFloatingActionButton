@@ -25,7 +25,6 @@ open class ButtonLayer: CAShapeLayer {
     
     override open var frame: CGRect {
         didSet {
-            print (self.frame)
             self.drawPlus()
             self.circleMask()
         }
