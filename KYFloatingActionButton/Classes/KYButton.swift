@@ -115,7 +115,7 @@ open class KYButton: UIView{
     
     
     UIView.animate(withDuration: 0.3) {
-    self.layer.transform = CATransform3DMakeRotation(CGFloat(-M_PI_4), 0.0, 0.0, 1)
+    self.layer.transform = CATransform3DMakeRotation(CGFloat(-(Double.pi / 4)), 0.0, 0.0, 1)
     self.overLayView.backgroundColor = UIColor.black.withAlphaComponent(0.5)
     }
     
