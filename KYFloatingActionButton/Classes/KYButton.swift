@@ -139,7 +139,7 @@ open class KYButton: UIView{
     
     }
     
-    func closeButton() {
+    @objc func closeButton() {
         
         UIView.animate(withDuration: 0.3, animations: {
             self.layer.transform = CATransform3DMakeRotation(0, 0.0, 0.0, 1)
